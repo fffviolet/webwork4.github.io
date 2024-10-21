@@ -1,0 +1,165 @@
+
+h1 {
+  color: #f3eaece8(0, 14%, 95%, 0.686);
+  text-align: center;
+  padding: 20px 0;
+  font-family:'微软雅黑';
+}
+.button-container {
+  display: flex;
+  justify-content: space-between; 
+  padding: 20px;
+}
+.button1 {
+  margin-right: 6px;
+  position: relative;
+  display: block;
+  width: 140px;
+  height: 90px;
+  line-height: 30px;
+  text-align: center;
+  background:  #4a494ae8;
+  margin: 0 auto;
+  color: #f7c1cee8;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+
+  &::before,
+   &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid #f7c1cee8;
+    transition:clip-path .5s ease-in-out;
+  }
+
+  &::before {
+    clip-path: inset(0 110px 40px 0);
+  }
+  &::after {
+    clip-path: inset(40px 0 0 110px);
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      clip-path: inset(0 0 0 0);
+    }
+ 
+  }
+
+}
+.button2 {
+  margin-right: 6px;
+  position: relative;
+  display: block;
+  width: 140px;
+  height: 90px;
+  line-height: 30px;
+  text-align: center;
+  background:  #4a494ae8;
+  margin: 0 auto;
+  color: #f7c1cee8;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+
+  &::before,
+   &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid #f7c1cee8;
+    transition:clip-path .5s ease-in-out;
+  }
+
+  &::before {
+    clip-path: inset(0 110px 40px 0);
+  }
+  &::after {
+    clip-path: inset(40px 0 0 110px);
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      clip-path: inset(0 0 0 0);
+    }
+ 
+  }
+
+}
+
+#alice {
+  color: #4a494ae8;
+  width: 25%;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform-origin: 0 0;
+  transform: rotate(0) translate3D(-50%, -50%, 0);
+  backface-visibility: hidden;
+  will-change: transform, color;
+}
+
+alice:hover img {
+  transform: scale(1.1);
+}
+
+path {
+  fill: currentColor;
+}
+
+/* This stuff might be interesting. */
+#tunnel {
+
+  background-image: linear-gradient(
+    125deg, #f7c1cee8, #acf4caf1,#b7ddf3, #e5c4f3, #f7ebbe, #f6d3a5, #c3c3fd
+   );
+  margin: 0 auto;
+  height: calc(100% + 300px);
+  width: 60%;
+  min-width: 400px;
+  backface-visibility: hidden;
+  will-change: transform;
+  background-size: 250%;
+  animation: bgmove 20s infinite;
+}
+
+.wrapper {
+  position: relative;
+  width: 1000px; height: 600px;
+  overflow: hidden;
+}
+
+body {
+  color: #fff;
+  background-image: linear-gradient(
+   125deg, #f7c1cee8, #acf4caf1,#b7ddf3, #e5c4f3, #f7ebbe, #f6d3a5, #c3c3fd
+  );
+  background-size: 300%;
+  animation-timing-function: linear;
+  animation: bgmove 20s infinite;
+}
+@keyframes bgmove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+
+
+
+
+
+
